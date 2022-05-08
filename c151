@@ -1,0 +1,29 @@
+from tkinter import *
+
+root = Tk()
+root.title("Sales Application")
+root.geometry("900x900")
+
+
+
+months = ("January","February","March","April","May","June","July","August","September","October","November","December")
+profits = (30000, 456000, 900000, 255000, 8500, 15000, 49000, 67000, 210000, 798000, 490000, 50000)
+
+max_profits = max(profits)
+max_profits_index = profits.index(max_profits)
+print(max_profits_index)
+
+max_profits_month = months[max_profits_index]
+print("The maximum profit of " + str(max_profits) + " was recorded in the month of " + str(max_profits_month))
+
+min_profits = min(profits)
+min_profits_index = profits.index(min_profits)
+print(min_profits_index)
+
+min_profits_month = months[min_profits_index]
+print("The minimum profit of " + str(min_profits) + " was recorded in the month of " + str(min_profits_month))
+
+month_Label= Label(root, text=months)
+profits_Label = Label(root, text=profits)
+max_label = Label(root)
+root.mainloop()
